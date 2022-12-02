@@ -21,3 +21,14 @@ def test_pipeline():
 
     # Assert that the model has a high accuracy
     assert accuracy_score(y, y_pred) >= 0.9
+
+if __name__ == "__main__":
+    import sys
+
+    # Add --cov flag if not already present
+    if "--cov" not in sys.argv:
+        sys.argv.append("--cov")
+
+    # Run the tests
+    pytest.main(sys.argv)
+
