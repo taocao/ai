@@ -22,6 +22,7 @@ def test_pipeline():
     # Assert that the model has a high accuracy
     assert accuracy_score(y, y_pred) >= 0.9
 
+# this will not run by pytest    
 if __name__ == "__main__":
     import sys
 
