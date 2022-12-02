@@ -12,4 +12,7 @@ jobs:
         with:
           python-version: 3.8
       - run: pip install -r requirements.txt
-      - run: pytest --cov=.
+      - run: pytest --cov=. --cov-report=html
+      - save_cache:
+          paths:
+            - htmlcov
