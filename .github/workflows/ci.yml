@@ -12,4 +12,4 @@ jobs:
         with:
           python-version: 3.8
       - run: pip install -r requirements.txt
-      - run: python test_pipeline.py --cov
+      - run: python test_pipeline.py
