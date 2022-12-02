@@ -1,0 +1,18 @@
+name: Test Pipeline
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - run: pip install -r requirements.txt
+      - run: pytest --cov=. --cov-report=html
+      - save_cache:
+          paths:
+            - htmlcov
